@@ -757,6 +757,9 @@ vendor/lib64/vendor.display.color@1.0.so|4a77650c5d42169073a13f5150da619bf806e7d
 vendor/lib64/vendor.display.color@1.1.so|a8bfe228ed1235f1ceb8ab794100c7edab38d0a7
 vendor/lib64/vendor.display.postproc@1.0.so|014e060db0ddb6b1f9af705fb11a775d00ee2d14
 
+# Power-off charging daemon
+-sbin/charger:sbin/chargeonlymode;rootfs|9b12b1d169608a85aad3641d4cabc539a862f6ef
+
 # QMI
 etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
