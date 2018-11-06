@@ -439,6 +439,7 @@ PRODUCT_PACKAGES += \
     init.qti.ims.sh \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.twistloop.rc \
     ueventd.qcom.rc \
     fstab.qcom
 
