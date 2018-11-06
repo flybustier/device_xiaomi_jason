@@ -55,7 +55,8 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-8.x/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-opt-linux-android-
 TARGET_KERNEL_SOURCE := kernel/xiaomi/jason
 TARGET_KERNEL_CONFIG := lineageos_jason_defconfig
 
