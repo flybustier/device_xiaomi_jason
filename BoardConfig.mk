@@ -59,6 +59,7 @@ KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-opt-linux-android-
 TARGET_KERNEL_SOURCE := kernel/xiaomi/jason
 TARGET_KERNEL_CONFIG := lineageos_jason_defconfig
+export CROSS_COMPILE_ARM32 = $(PWD)/prebuilts/gcc/linux-x86/armv7-eabihf--glibc/bin/arm-buildroot-linux-gnueabihf-
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
