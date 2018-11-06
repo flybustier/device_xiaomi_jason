@@ -40,3 +40,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := "Xiaomi/jason/jason:7.1.1/NMF26X/V9.6.2.0.NCHMIFD:user/release-keys"
 
 TARGET_VENDOR := Xiaomi
+
+KBUILD_USER := uvera
+KBUILD_HOST := jason
