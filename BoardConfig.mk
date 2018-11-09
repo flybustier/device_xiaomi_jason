@@ -61,6 +61,9 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/jason
 TARGET_KERNEL_CONFIG := lineageos_jason_defconfig
 export CROSS_COMPILE_ARM32 = $(PWD)/prebuilts/gcc/linux-x86/armv7-eabihf--glibc/bin/arm-buildroot-linux-gnueabihf-
 
+#SU
+WITH_SU := false
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
