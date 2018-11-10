@@ -24,6 +24,10 @@ $(call inherit-product, device/xiaomi/jason/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2018-09-01
+
 PRODUCT_NAME := lineage_jason
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := jason
