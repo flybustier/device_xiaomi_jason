@@ -118,4 +118,4 @@ on property:sys.boot_completed=1
     # Lower vfs_cache_pressure
     write /proc/sys/vm/vfs_cache_pressure 60
 
-    setprop net.hostname TwistLoop-crDroid 
+    setprop net.hostname TwistLoop-AOSiP
