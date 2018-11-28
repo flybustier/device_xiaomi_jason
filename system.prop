@@ -237,3 +237,6 @@ ro.qcom.ad.sensortype=2
 
 # Enable HAL3
 persist.camera.HAL3.enabled=1
+
+# LCD Density
+ro.sf.lcd_density=415
