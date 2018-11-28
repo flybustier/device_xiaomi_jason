@@ -264,5 +264,10 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_HIDL_FEATURE_AWARE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# HALs
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8998
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8998
+TARGET_QCOM_DISPLAY_VARIANT := caf-msm8998
+
 # inherit from the proprietary version
 -include vendor/xiaomi/jason/BoardConfigVendor.mk

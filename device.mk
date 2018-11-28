@@ -31,8 +31,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+#PRODUCT_ENFORCE_RRO_TARGETS := \
+#    framework-res
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -481,8 +481,8 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.force_on_dc=true \
