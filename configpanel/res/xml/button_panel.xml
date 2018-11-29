@@ -22,10 +22,4 @@
         android:title="@string/button_swap_title"
         android:summary="@string/button_swap_summary" />
 
-    <SwitchPreference
-        android:key="fp_pocketmode"
-        android:title="@string/fingerprint_pocketmode_title"
-        android:summary="@string/fingerprint_pocketmode_summary"
-        android:defaultValue="true" />
-
 </PreferenceScreen>
