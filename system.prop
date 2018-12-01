@@ -235,8 +235,9 @@ ro.qcom.ad=1
 ro.qcom.ad.calib.data=/vendor/etc/calib.cfg
 ro.qcom.ad.sensortype=2
 
-# Enable HAL3
+# Camera customization
 persist.camera.HAL3.enabled=1
+persist.camera.eis.enable=1
 
 # LCD Density
 ro.sf.lcd_density=415
