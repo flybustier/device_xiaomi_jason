@@ -23,3 +23,6 @@ type thermal_data_file, file_type, data_file_type;
 
 # Touchscreen
 type sysfs_touchpanel, sysfs_type, fs_type;
+
+# Kcal
+type kcal_dev, sysfs_type, file_type;

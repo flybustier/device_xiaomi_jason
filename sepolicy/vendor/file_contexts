@@ -33,3 +33,12 @@
 
 # Touchscreen
 /sys/devices/soc/c178000\.i2c/i2c-4/4-0020/input/input[0-9]+/wake_gesture                       u:object_r:sysfs_touchpanel:s0
+
+# Vibrator control
+/sys/devices/virtual/timed_output/vibrator/vtg_level    u:object_r:sysfs_vibrator:s0
+/sys/devices/virtual/timed_output/vibrator/vtg_min      u:object_r:sysfs_vibrator:s0
+/sys/devices/virtual/timed_output/vibrator/vtg_max      u:object_r:sysfs_vibrator:s0
+
+# Kcal
+/sys/devices/platform/kcal_ctrl.0(/.*)?			u:object_r:kcal_dev:s0
+/sys/bus/platform/drivers/kcal_ctrl(/.*)?		u:object_r:kcal_dev:s0

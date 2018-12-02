@@ -26,7 +26,7 @@ import android.content.SharedPreferences;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.aospextended.FileUtils;
 
 public class Startup extends BroadcastReceiver {
 
@@ -35,8 +35,11 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
-        if (lineageos.content.Intent.ACTION_INITIALIZE_LINEAGE_HARDWARE.equals(action)) {
+        if (Intent.ACTION_BOOT_COMPLETED.equals(action) || Intent.ACTION_PRE_BOOT_COMPLETED.equals(action)) {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+            VibratorStrengthPreference.restore(context);
+            DisplayCalibration.restore(context);
 
             // Disable button settings if needed
             if (!hasButtonNodes()) {
@@ -59,11 +62,6 @@ public class Startup extends BroadcastReceiver {
                             " failed while restoring saved preference values");
                     }
                 }
-
-                // Send initial broadcasts
-                final boolean shouldEnablePocketMode =
-                        prefs.getBoolean(Constants.FP_POCKETMODE_KEY, true);
-                Utils.broadcastCustIntent(context, shouldEnablePocketMode);
             }
         }
     }
