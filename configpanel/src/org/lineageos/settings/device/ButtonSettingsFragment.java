@@ -35,6 +35,7 @@ import org.lineageos.internal.util.FileUtils;
 public class ButtonSettingsFragment extends PreferenceFragment
         implements OnPreferenceChangeListener {
 
+    private NotificationBrightnessPreference mNotificationBrightness;
     private VibratorStrengthPreference mVibratorStrength;
     private Preference mKcalPref;
 
@@ -43,6 +44,11 @@ public class ButtonSettingsFragment extends PreferenceFragment
         addPreferencesFromResource(R.xml.button_panel);
         final ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        mNotificationBrightness = (NotificationBrightnessPreference) findPreference("notification_key");
+        if (mNotificationBrightness != null) {
+            mNotificationBrightness.setEnabled(NotificationBrightnessPreference.isSupported());
+        }
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference("vibrator_key");
         if (mVibratorStrength != null) {
@@ -138,7 +144,9 @@ public class ButtonSettingsFragment extends PreferenceFragment
     public void onDisplayPreferenceDialog(Preference preference) {
         if (preference instanceof VibratorStrengthPreference){
             ((VibratorStrengthPreference)preference).onDisplayPreferenceDialog(preference);
-        } else {
+        } else if (preference instanceof NotificationBrightnessPreference){
+            ((NotificationBrightnessPreference)preference).onDisplayPreferenceDialog(preference);
+	} else {
             super.onDisplayPreferenceDialog(preference);
         }
     }
