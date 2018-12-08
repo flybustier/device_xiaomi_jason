@@ -183,8 +183,8 @@ ro.vendor.sensors.multitap=true
 #xiaomi pick up gusture
 persist.sys.sensors.pug=true
 
-#Expose aux camera for below packages
-vendor.camera.aux.packagelist=com.android.camera
+#HAL1 packagelist
+camera.hal1.packagelist=com.whatsapp
 
 #disable UBWC for camera
 persist.camera.preview.ubwc=0
