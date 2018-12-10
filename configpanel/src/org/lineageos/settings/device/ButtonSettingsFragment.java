@@ -60,11 +60,6 @@ public class ButtonSettingsFragment extends PreferenceFragment
             return true;
         }
 
-        if (Constants.FP_POCKETMODE_KEY.equals(preference.getKey())) {
-            Utils.broadcastCustIntent(getContext(), (Boolean) newValue);
-            return true;
-        }
-
         return false;
     }
 
@@ -94,14 +89,6 @@ public class ButtonSettingsFragment extends PreferenceFragment
             } else {
                 l.setEnabled(false);
             }
-        }
-
-        // Initialize other preferences whose keys are not associated with nodes
-        SwitchPreference b = (SwitchPreference) findPreference(Constants.FP_POCKETMODE_KEY);
-        if (!PackageManagerUtils.isAppInstalled(getContext(), "org.lineageos.pocketmode")) {
-            getPreferenceScreen().removePreference(b);
-        } else {
-            b.setOnPreferenceChangeListener(this);
         }
     }
 
