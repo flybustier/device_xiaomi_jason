@@ -213,9 +213,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Camera2 \
+    MiuiCamera \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/MiuiCamera/etc/jason.xml:system/etc/device_features/jason.xml \
+    $(LOCAL_PATH)/MiuiCamera/etc/miuicamera-permissions.xml:system/etc/default-permissions/miuicamera-permissions.xml
 
 # ConfigPanel
 PRODUCT_PACKAGES += \
