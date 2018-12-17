@@ -26,7 +26,7 @@ import android.content.SharedPreferences;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 
-import com.android.internal.util.aospextended.FileUtils;
+import org.lineageos.internal.util.FileUtils;
 
 public class Startup extends BroadcastReceiver {
 
@@ -38,6 +38,7 @@ public class Startup extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(action) || Intent.ACTION_PRE_BOOT_COMPLETED.equals(action)) {
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
+            NotificationBrightnessPreference.restore(context);
             VibratorStrengthPreference.restore(context);
             DisplayCalibration.restore(context);
 
