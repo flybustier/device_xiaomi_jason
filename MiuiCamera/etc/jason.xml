@@ -195,7 +195,7 @@
     <!--whether support pre-installed application-->
     <bool name="support_pre_installed_application">true</bool>
     <!--wheater support validate device when syste upadte -->
-    <bool name="support_ota_validate">false</bool>
+    <bool name="support_ota_validate">true</bool>
     <!--whether show basic info items-->
     <bool name="support_show_basic_items">true</bool>
     <!--whether show my device-->
@@ -225,7 +225,7 @@
     <!--Left margin of count down parent layout for front camera-->
     <float name="camera_front_count_down_margin">-0.5347</float>
     <bool name="front_fingerprint_sensor">true</bool>
-    <bool name="support_parallel_process">true</bool>
+    <bool name="support_parallel_process">false</bool>
     <!--whether the device supports smart cover with small window-->
     <bool name="support_small_win_cover">true</bool>
     <!--0: x7 type; 1: A1 type -->
@@ -298,6 +298,7 @@
         <item>com.miui.personalassistant</item>
         <item>com.miui.voip</item>
         <item>com.miui.yellowpage</item>
+        <item>com.xiaomi.drivemode</item>
     </string-array>
     <!--system data-app path list -->
     <string-array name="system_data_path_list">
@@ -316,6 +317,7 @@
         <item>/system/data-app/PersonalAssistant/PersonalAssistant.apk</item>
         <item>/system/data-app/MiuiVoip/MiuiVoip.apk</item>
         <item>/system/data-app/YellowPage/YellowPage.apk</item>
+        <item>/system/data-app/MiuiDriveMode/MiuiDriveMode.apk</item>
     </string-array>
     <bool name="support_audio_loopback">false</bool>
     <!-- whether CN hardware can flash Global rom -->
@@ -329,4 +331,14 @@
     <bool name="is_support_portrait">true</bool>
     <!--whether taking legacy face beauty in camera-->
     <bool name="is_legacy_face_beauty">false</bool>
+    <!--whether support add watermark on bottom left of picture-->
+    <bool name="support_picture_watermark">true</bool>
+    <!--whether add algorithm in file name or not-->
+    <bool name="enable_algorithm_in_file_suffix">false</bool>
+    <!--whether front camera support bokeh or not-->
+    <bool name="support_front_bokeh">true</bool>
+    <!--whether camera support portrait mode switch -->
+    <bool name="camera_is_support_portrait_switch">true</bool>
+    <!--whether support freeform mode in game mode-->
+    <bool name="support_freeform_reply">true</bool>
 </features>
